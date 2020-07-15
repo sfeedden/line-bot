@@ -39,7 +39,13 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    s = '你吃飯了嗎？'
+    r = '我不知道你在說什麼，請再重新輸入！'
+
+    if msg == 'hi':
+        r = 'hi'
+    elif msg == '你吃飯了嗎？':
+        r = '謝謝你！我吃過了～'
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=s))
