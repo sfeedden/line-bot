@@ -36,7 +36,7 @@ def callback():
     return 'OK'
 
 
-@handler.add(MessageEvent, message=TextMessage)
+@handler.add(MessageEvent, message=TextMessage, sticker_message = StickerSendMessage)
 def handle_message(event):
     msg = event.message.text
     r = '我不知道你在說什麼，請再重新輸入！'
