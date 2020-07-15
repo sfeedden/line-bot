@@ -47,11 +47,11 @@ def handle_message(event):
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=r))
-
-    sticker_message = StickerSendMessage(
+        TextSendMessage(text=r),
+        StickerSendMessage(
         package_id='11539',
-        sticker_id='52114147')
+        sticker_id='52114147'))
+
 
 
 if __name__ == "__main__":
